@@ -1,0 +1,25 @@
+.pokemon-list {
+    width: 100%;
+    max-width: 521px;
+    display: flex;
+    flex-direction: column;
+
+    .search-pokemon {
+        background-color: #f2f2f2;
+        height: 36px;
+        border-radius: 10px;
+        border: none;
+    }
+
+
+    &--pokemons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &--item {
+            width: 164.44px;
+            height: 106.35px;
+            background-color: #f2f2f2;
+            border-radius: 20px;
+        }
+    }
+}

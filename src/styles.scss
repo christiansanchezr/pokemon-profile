@@ -69,3 +69,17 @@ body {
   textarea:focus, input:focus{
     outline: none;
 }
+
+.app-title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    color: #01426A;
+}
+
+.app-textinfo {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #868686;
+}
