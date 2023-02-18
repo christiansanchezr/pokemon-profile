@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IPokemon } from '../interfaces/pokemon.interface';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { Subject, Subscription, debounceTime } from 'rxjs';
@@ -17,6 +17,8 @@ export class PokemonListComponent {
   private subscription?: Subscription;
   debounceTime = 500;
 
+  @Output() onLoaded = new EventEmitter<boolean>();
+
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
@@ -34,6 +36,7 @@ export class PokemonListComponent {
   async getData() {
     this.pokemons = await this.pokemonService.getPokemons();
     console.log(this.pokemons);
+    this.onLoaded.emit(true);
   }
 
   inputChanged(event: any) {
@@ -45,9 +48,15 @@ export class PokemonListComponent {
   }
 
   async searchPokemon(value: string | number) {
-    const response: IPokemon = await this.pokemonService.getPokemonByNameOrId(value);
+    if (value == '') {
+      const response: IPokemon[] = await this.pokemonService.getPokemons();
+      this.pokemons = response;
+    } else {
+      const response: IPokemon = await this.pokemonService.getPokemonByNameOrId(value);
 
-    this.pokemons = [ response ];
+      this.pokemons = [ response ];
+    }
+    
   }
   
   getPokemonImageByUrl(url: string) {

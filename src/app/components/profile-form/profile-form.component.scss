@@ -1,5 +1,4 @@
 .profile-form {
-    width: 100%;
     max-width: 341px;
     &--title {
         font-weight: 400;
@@ -13,5 +12,21 @@
         font-size: 18px;
         line-height: 27px;
         color: #868686;
+    }
+
+    input {
+        width: auto;
+        margin: 8px 0;
+    }
+
+    .custom-input {
+        width: 100%;
+        input {
+            min-width: 303px;
+        }
+    }
+
+    .default-button {
+        margin-top: 62px;
     }
 }

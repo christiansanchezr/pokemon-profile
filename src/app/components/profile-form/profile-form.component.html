@@ -11,10 +11,17 @@
             <input type="text"/>
             <label>Nombre*</label>
         </div>
-        <input type="text" placeholder="Pasatiempo favorito^"/>
+        <div class="custom-input">
+            <input type="text"/>
+            <label>Pasatiempo favorito*</label>
+        </div>
         <input type="date" placeholder="Cumpleaños^"/>
-        <input type="text" placeholder="Documento^"/>
+        <div class="custom-input">
+            <input type="text"/>
+            <label>DUI*</label>
+        </div>
+        <button class="default-button" (click)="continue($event)">Continuar</button>
     </div>
+   
 
-    
 </form>

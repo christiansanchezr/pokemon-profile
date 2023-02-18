@@ -1,5 +1,8 @@
 <div class="test-content">
-  <app-profile-info></app-profile-info>
-  <app-pokemon-list></app-pokemon-list>
+  <app-profile-info [title]="step2 ? '' : 'Imágen perfil'" [showUpload]="step2 ? false : true"></app-profile-info>
+  <app-profile-form *ngIf="!step2" (onContinue)="toStep2()"></app-profile-form>
+  <app-pokemon-list *ngIf="step2" (onLoaded)="pokemonsLoaded()"></app-pokemon-list>
+
+  <app-loading *ngIf="showLoading"></app-loading>
 </div>
 

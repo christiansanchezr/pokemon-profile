@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-profile-form',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-form.component.scss']
 })
 export class ProfileFormComponent {
+  @Output()onContinue = new EventEmitter<boolean>();
 
+
+  continue(event: any) {
+    event.preventDefault();
+    this.onContinue.emit(true);
+  }
 }

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ProfileFormComponent } from './components/profile-form/profile-form.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileInfoComponent,
     ProfileFormComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
