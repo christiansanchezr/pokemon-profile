@@ -1,0 +1,17 @@
+.profile-form {
+    width: 100%;
+    max-width: 341px;
+    &--title {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        color: #01426A;
+    }
+
+    &--info {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #868686;
+    }
+}
