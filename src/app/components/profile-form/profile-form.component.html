@@ -1,4 +1,4 @@
-<form class="profile-form">
+<form class="profile-form" [formGroup]="formGroup">
     <p class="profile-form--title">
         Tu información
     </p>
@@ -8,17 +8,17 @@
     
     <div class="form-group">
         <div class="custom-input">
-            <input type="text"/>
+            <input type="text" formControlName="name"/>
             <label>Nombre*</label>
         </div>
         <div class="custom-input">
-            <input type="text"/>
+            <input type="text" formControlName="hobbie"/>
             <label>Pasatiempo favorito*</label>
         </div>
-        <input type="date" placeholder="Cumpleaños^"/>
+        <input type="date" placeholder="Cumpleaños" formControlName="birthday"/>
         <div class="custom-input">
-            <input type="text"/>
-            <label>DUI*</label>
+            <input type="text" formControlName="dui"/>
+            <label>DUI</label>
         </div>
         <button class="default-button" (click)="continue($event)">Continuar</button>
     </div>

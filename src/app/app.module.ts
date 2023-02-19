@@ -7,6 +7,7 @@ import { ProfileInfoComponent } from './components/profile-info/profile-info.com
 import { ProfileFormComponent } from './components/profile-form/profile-form.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoadingComponent } from './components/loading/loading.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
